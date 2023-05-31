@@ -31,3 +31,4 @@ Console.WriteLine("valor ingresado no es un numero valido");
     Console.WriteLine("Valor invertido: "+invertido);
 }
 
+//EJERCICIO 4
