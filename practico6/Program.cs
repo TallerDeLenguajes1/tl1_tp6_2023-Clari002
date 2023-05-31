@@ -57,7 +57,10 @@ if (!int.TryParse(Console.ReadLine(),out num1))
         Console.WriteLine("El valor ingresado no es valido");
        return;
     }else{
-        switch (valor)
+        int resp;
+        do
+        {
+            switch (valor)
         {
             case 1:
             suma = num1 + num2;
@@ -80,9 +83,31 @@ if (!int.TryParse(Console.ReadLine(),out num1))
             break;
 
             default:
-
             break;
         }
+
+        Console.WriteLine("Realizar otra operacion SI(1) No(0): ");
+        if (!int.TryParse(Console.ReadLine(), out resp))
+        {
+            Console.WriteLine("El valor ingresado no es valido");
+            return;
+        }else{
+            if(resp == 1){
+                    Console.WriteLine("(1)Suma");
+                    Console.WriteLine("(2)Resta");
+                    Console.WriteLine("(3)Multiplicar");
+                    Console.WriteLine("(4)Dividir");
+                    Console.WriteLine("Ingrese un valor: ");
+                    if (!int.TryParse(Console.ReadLine(), out valor))
+                    {
+                           Console.WriteLine("El valor ingresado no es valido");
+                          return;
+                    }
+            }
+            
+        } 
+        } while (resp != 0);
+        
     }
 }
 
